@@ -1,24 +1,54 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Header';
+import Weather from './weather';
+import SubHeader from './SubHeader';
+import WWeather from './WWeather';
+import Sale from './Sale';
+import Week from './Week';
+import { Container, Row, Col } from 'react-bootstrap';
+import Carousel from 'react-bootstrap/Carousel';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Carousel interval={5000}>
+
+<Carousel.Item >
+  <Container fluid>
+    <Sale />
+  </Container>
+</Carousel.Item>
+     
+<Carousel.Item>
+      <Header />
+      <Container fluid className='img'>
+        <Row >
+          <Col>
+            <Weather area="110000" areaname="埼玉エリア" />
+          </Col>
+          <Col>
+            <Weather area="130000" areaname="東京エリア" />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Weather area="140000" areaname="神奈川エリア" />
+          </Col>
+          <Col>
+            <Weather area="120000" areaname="千葉エリア" />
+          </Col>
+        </Row>
+      </Container>
+      <SubHeader />
+      <Week />
+      <WWeather area="110000" areaname="埼玉" />
+      <WWeather area="130000" areaname="東京" />
+      <WWeather area="120000" areaname="千葉" />
+      <WWeather area="140000" areaname="神奈川" />
+ </Carousel.Item>
+
+  </Carousel>
+    </>
   );
 }
 

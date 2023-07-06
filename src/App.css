@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+.img {
+  background-image:url('N749_sugasugasiiaozora.jpg');
+  background-repeat:no-repeat;
+  background-size:  150% auto;
+}
+
+.imge{
+  background-image: url('https://counity.blob.core.windows.net/counitysale/SALEDAY試作.png');
+  background-repeat: no-repeat;
+  background-size:  150% auto;
+}  
