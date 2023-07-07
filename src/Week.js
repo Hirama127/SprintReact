@@ -69,20 +69,21 @@ function Week() {
 
             return (
                 <div style={{ width: '100%', height: '100%' }}>
-                    <table className="tabStyle" style={tabStyle}>
-                        <tbody>
-                            <tr style={tableStyle}>
-                                <th style={tableStyle}>日付</th>
-                                <th style={tableStyle}>{month1}/{day1}({weekday1})</th>
-                                <th style={tableStyle}>{month2}/{day2}({weekday2})</th>
-                                <th style={tableStyle}>{month3}/{day3}({weekday3})</th>
-                                <th style={tableStyle}>{month4}/{day4}({weekday4})</th>
-                                <th style={tableStyle}>{month5}/{day5}({weekday5})</th>
-                                <th style={tableStyle}>{month6}/{day6}({weekday6})</th>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <table className="tabStyle" style={tabStyle}>
+                  <tbody> 
+                    <tr style={tableStyle}>
+                      <th style={tableStyle}>日付</th>
+                      <th style={tableStyle}>{month1}/{day1}({weekday1})</th>
+                      <th style={tableStyle}>{month2}/{day2}({weekday2})</th>
+                      <th style={tableStyle}>{month3}/{day3}({weekday3})</th>
+                      <th style={tableStyle}>{month4}/{day4}({weekday4})</th>
+                      <th style={tableStyle}>{month5}/{day5}({weekday5})</th>
+                      <th style={tableStyle}>{month6}/{day6}({weekday6})</th>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
             );
         } catch (error) {
             console.error('データの取得エラー:', error);
