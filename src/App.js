@@ -1,10 +1,11 @@
 import './App.css';
 import Header from './Header';
-import Weather from './weather';
+import Weather from './Weather';
 import SubHeader from './SubHeader';
 import WWeather from './WWeather';
 import Sale from './Sale';
 import Week from './Week';
+import Infi from './Infi';
 import { Container, Row, Col } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
 
@@ -14,8 +15,8 @@ function App() {
     <Carousel interval={5000}>
 
 <Carousel.Item >
-  <Container fluid>
-    <Sale />
+  <Container fluid className="container-fluid2">
+    <Sale/>
   </Container>
 </Carousel.Item>
      
@@ -45,7 +46,31 @@ function App() {
       <WWeather area="130000" areaname="東京" />
       <WWeather area="120000" areaname="千葉" />
       <WWeather area="140000" areaname="神奈川" />
- </Carousel.Item>
+  </Carousel.Item>
+
+  <Carousel.Item>
+    <Container fluid className='infi'>
+      <Infi url='https://counity.blob.core.windows.net/counitysale/review.png' alt='レビュー広告'/>
+    </Container>
+  </Carousel.Item>
+
+  <Carousel.Item>
+    <Container fluid className='infi'>
+      <Infi url='https://counity.blob.core.windows.net/counitysale/recipe.png'alt='レシピ広告'/>
+    </Container>
+  </Carousel.Item>
+
+  <Carousel.Item>
+    <Container fluid className='infi'>
+      <Infi url='https://counity.blob.core.windows.net/counitysale/enquete.png' alt='アンケート機能広告'/>
+    </Container>
+  </Carousel.Item>
+
+  <Carousel.Item>
+    <Container fluid className='infi'>
+      <Infi url='https://counity.blob.core.windows.net/counitysale/concierge.png' alt='コンシェルジュ広告'/>
+    </Container>
+  </Carousel.Item>
 
   </Carousel>
     </>

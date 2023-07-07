@@ -26,12 +26,12 @@ for (let i = 0; i < 7; i++) {
     const formattedDate = `${date.getMonth() + 1}/${date.getDate()}(${day})`;
     dates.push(formattedDate);
 }
-const date1 = dates[0];
-const date2 = dates[1];
-const date3 = dates[2];
-const date4 = dates[3];
-const date5 = dates[4];
-const date6 = dates[5];
+const date1 = dates[1];
+const date2 = dates[2];
+const date3 = dates[3];
+const date4 = dates[4];
+const date5 = dates[5];
+const date6 = dates[6];
 
 
 return(
