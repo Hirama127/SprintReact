@@ -12,7 +12,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.container-fluid{
+
+.container-fluid {
   margin: 0px;
   padding: 0px;
 }

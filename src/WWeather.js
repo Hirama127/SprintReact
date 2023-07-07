@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import './Weather.css';
 
 const tableStyle = {
@@ -159,89 +159,89 @@ function WWeather(props) {
     const [tempMin3, setTempMin3] = useState();
     const [tempMin4, setTempMin4] = useState();
     const [tempMin5, setTempMin5] = useState();
- 
 
-    
+
+
     const [tempMax2, setTempMax2] = useState();
     const [tempMax3, setTempMax3] = useState();
     const [tempMax4, setTempMax4] = useState();
     const [tempMax5, setTempMax5] = useState();
     const [tempMax6, setTempMax6] = useState();
-  
+
     const [tempMax, setTempMax] = useState();
     const [tempMin, setTempMin] = useState();
     useEffect(() => {
         const fecthWeatherData = () => {
-    fetch(forecastUrl)
-        .then(response => response.json())
-        .then(data => {
+            fetch(forecastUrl)
+                .then(response => response.json())
+                .then(data => {
 
-            const weatherCodes = data[1].timeSeries[0].areas[0].weatherCodes;
-            for (let i = 0; i < weatherCodes.length; i++) {
-                const img = E.TELOPS[weatherCodes[i]][0];
-                if (i === 0) {
-                    setImgSrc1(`https://www.jma.go.jp/bosai/forecast/img/${img}`);
-                } else if (i === 1) {
-                    setImgSrc2(`https://www.jma.go.jp/bosai/forecast/img/${img}`);
-                } else if (i === 2) {
-                    setImgSrc3(`https://www.jma.go.jp/bosai/forecast/img/${img}`);
-                } else if (i === 3) {
-                    setImgSrc4(`https://www.jma.go.jp/bosai/forecast/img/${img}`);
-                } else if (i === 4) {
-                    setImgSrc5(`https://www.jma.go.jp/bosai/forecast/img/${img}`);
-                } else if (i === 5) {
-                    setImgSrc6(`https://www.jma.go.jp/bosai/forecast/img/${img}`);
-                } 
-            }
-            const tempsMin = data[1].timeSeries[1].areas[0].tempsMin;
-            setTempMin1(tempsMin);
-            for (let i = 0; i < tempsMin.length; i++) {
-                if (i === 0) {
-                    setTempMin1(tempsMin[1]);
-                } else if (i === 1) {
-                    setTempMin2(tempsMin[2]);
-                } else if (i === 2) {
-                    setTempMin3(tempsMin[3]);
-                } else if (i === 3) {
-                    setTempMin4(tempsMin[4]);
-                } else if (i === 4) {
-                    setTempMin5(tempsMin[5]);
-                }
-            }
-            const tempsMax = data[1].timeSeries[1].areas[0].tempsMax;
-            for (let i = 0; i < tempsMax.length; i++) {
-                if (i === 0) {
-                } else if (i === 1) {
-                    setTempMax2(tempsMax[1]);
-                } else if (i === 2) {
-                    setTempMax3(tempsMax[2]);
-                } else if (i === 3) {
-                    setTempMax4(tempsMax[3]);
-                } else if (i === 4) {
-                    setTempMax5(tempsMax[4]);
-                } else if (i === 5) {
-                    setTempMax6(tempsMax[5]);
-                } else if (i === 6) {
-                    setTempMax6(tempsMax[6]);
-                }
-            }
+                    const weatherCodes = data[1].timeSeries[0].areas[0].weatherCodes;
+                    for (let i = 0; i < weatherCodes.length; i++) {
+                        const img = E.TELOPS[weatherCodes[i]][0];
+                        if (i === 0) {
+                            setImgSrc1(`https://www.jma.go.jp/bosai/forecast/img/${img}`);
+                        } else if (i === 1) {
+                            setImgSrc2(`https://www.jma.go.jp/bosai/forecast/img/${img}`);
+                        } else if (i === 2) {
+                            setImgSrc3(`https://www.jma.go.jp/bosai/forecast/img/${img}`);
+                        } else if (i === 3) {
+                            setImgSrc4(`https://www.jma.go.jp/bosai/forecast/img/${img}`);
+                        } else if (i === 4) {
+                            setImgSrc5(`https://www.jma.go.jp/bosai/forecast/img/${img}`);
+                        } else if (i === 5) {
+                            setImgSrc6(`https://www.jma.go.jp/bosai/forecast/img/${img}`);
+                        }
+                    }
+                    const tempsMin = data[1].timeSeries[1].areas[0].tempsMin;
+                    setTempMin1(tempsMin);
+                    for (let i = 0; i < tempsMin.length; i++) {
+                        if (i === 0) {
+                            setTempMin1(tempsMin[1]);
+                        } else if (i === 1) {
+                            setTempMin2(tempsMin[2]);
+                        } else if (i === 2) {
+                            setTempMin3(tempsMin[3]);
+                        } else if (i === 3) {
+                            setTempMin4(tempsMin[4]);
+                        } else if (i === 4) {
+                            setTempMin5(tempsMin[5]);
+                        }
+                    }
+                    const tempsMax = data[1].timeSeries[1].areas[0].tempsMax;
+                    for (let i = 0; i < tempsMax.length; i++) {
+                        if (i === 0) {
+                        } else if (i === 1) {
+                            setTempMax2(tempsMax[1]);
+                        } else if (i === 2) {
+                            setTempMax3(tempsMax[2]);
+                        } else if (i === 3) {
+                            setTempMax4(tempsMax[3]);
+                        } else if (i === 4) {
+                            setTempMax5(tempsMax[4]);
+                        } else if (i === 5) {
+                            setTempMax6(tempsMax[5]);
+                        } else if (i === 6) {
+                            setTempMax6(tempsMax[6]);
+                        }
+                    }
 
-            const temps = data[0].timeSeries[2].areas[0].temps[1];
-            setTempMax(temps);
-            const mintemps = data[0].timeSeries[2].areas[0].temps[0];
-            setTempMin(mintemps);
-        })
-        
-        .catch(error => {
-            console.log(error);
-        });
-    };
+                    const temps = data[0].timeSeries[2].areas[0].temps[1];
+                    setTempMax(temps);
+                    const mintemps = data[0].timeSeries[2].areas[0].temps[0];
+                    setTempMin(mintemps);
+                })
+
+                .catch(error => {
+                    console.log(error);
+                });
+        };
         fecthWeatherData();
-        const timer = setInterval(fecthWeatherData,3600000);
-        return()=>{
-          clearInterval(timer);
+        const timer = setInterval(fecthWeatherData, 3600000);
+        return () => {
+            clearInterval(timer);
         }
-      }, [forecastUrl,E.TELOPS]);
+    }, [forecastUrl, E.TELOPS]);
 
 
     return (
@@ -259,7 +259,7 @@ function WWeather(props) {
                             <th><img src={imgSrc5} alt={areaname} style={{ width: '100%', height: '100%' }} /></th>
                             <th><img src={imgSrc6} alt={areaname} style={{ width: '100%', height: '100%' }} /></th>
                         </tr>
-                        <tr style={{ textAlign: 'center'}}>
+                        <tr style={{ textAlign: 'center' }}>
                             <th> <h3 className="min">最低</h3><h3>/</h3><h3 className="max">最高</h3></th>
                             <th><h2 className="min">{tempMin}</h2><h2>/</h2><h2 className="max">{tempMax}</h2></th>
                             <th><h2 className="min">{tempMin1}</h2><h2>/</h2><h2 className="max">{tempMax2}</h2></th>

@@ -1,27 +1,28 @@
-
-
-.tabStyle th, .tabStyle td{
-border: 1px solid black;
-font-size: 30;
-padding: 10;
-margin-top: 0;
-background-color: '#cccccc';
-color: 'black';
-text-align: 'center';
-border: '1px solid black';
+.tabStyle th,
+.tabStyle td {
+  border: 1px solid black;
+  font-size: 30;
+  padding: 10;
+  margin-top: 0;
+  background-color: '#cccccc';
+  color: 'black';
+  text-align: 'center';
+  border: '1px solid black';
 }
 
 h2 {
-    display: inline-block;
-  }
-.max{
-    color: red;
-}  
-.min{
-    color: blue;
-    
+  display: inline-block;
+}
+
+.max {
+  color: red;
+}
+
+.min {
+  color: blue;
+
 }
 
 h3 {
-    display: inline-block;
-  }
+  display: inline-block;
+}

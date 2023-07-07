@@ -32,17 +32,19 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
 .img {
-  background-image:url('https://counity.blob.core.windows.net/counitysale/N749_sugasugasiiaozora.jpg');
-  background-repeat:no-repeat;
-  background-size:  150% auto;
+  background-image: url('https://counity.blob.core.windows.net/counitysale/N749_sugasugasiiaozora.jpg');
+  background-repeat: no-repeat;
+  background-size: 150% auto;
 }
 
-.container-fluid2{
+.container-fluid2 {
   background-image: url('https://counity.blob.core.windows.net/counitysale/saleday.png');
   background-repeat: "no-repeat";
   width: 1080px;
@@ -50,8 +52,8 @@
   padding: 400px 0px 0px 0px;
   margin: 0px;
 }
-.infi{
+
+.infi {
   background-image: url('https://counity.blob.core.windows.net/counitysale/saleday.png');
   background-repeat: "no-repeat";
 }
-

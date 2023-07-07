@@ -7,15 +7,14 @@ const SubHeader = () => {
     color: '#F9FAFB',
     textAlign: 'center',
     fontFamily: 'cursive',
-  
   }
+
   return (
     <>
-    <div style={headerStyle}>
-      <p>週間天気予報</p>
+      <div style={headerStyle}>
+        <p>週間天気予報</p>
       </div>
     </>
   )
 }
-
 export default SubHeader;
