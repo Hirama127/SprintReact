@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import './Sale.css';
+import './Sales.css';
 
 const Sale = () => {
     //状態の初期化

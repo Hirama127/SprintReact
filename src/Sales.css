@@ -1,0 +1,17 @@
+.saleTable {
+    font-size: 34px;
+    font-weight: 500;
+    border-collapse: collapse;
+    background-color: rgb(255, 250, 196);
+  }
+  
+  .saleTable td,
+  .saleTable th {
+    border: solid rgb(13, 12, 12);
+    padding: 9px;
+  }
+  
+  .saleTable th {
+    font-size: 42px;
+    color: rgb(25, 25, 129);
+  }
