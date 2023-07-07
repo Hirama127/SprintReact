@@ -227,8 +227,7 @@ function WWeather(props) {
 
                     const temps = data[0].timeSeries[2].areas[0].temps[1];
                     setTempMax(temps);
-                    const mintemps = data[0].timeSeries[2].areas[0].temps[0];
-                    setTempMin(mintemps);
+                 
                 })
 
                 .catch(error => {
