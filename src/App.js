@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './Header';
-import Weather from './Weather';
+import Weather from './TWeather';
 import SubHeader from './SubHeader';
 import WWeather from './WWeather';
 import Sale from './Sale';
