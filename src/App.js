@@ -14,11 +14,7 @@ function App() {
     <>
     <Carousel interval={5000}>
 
-<Carousel.Item >
-  <Container fluid className="container-fluid2">
-    <Sale/>
-  </Container>
-</Carousel.Item>
+
      
 <Carousel.Item>
       <Header />
