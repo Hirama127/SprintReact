@@ -9,6 +9,7 @@ const Sale = () => {
     const [saleData, setSaleData] = useState();
     //useEffectを設定する→データの取得と状態の更新
     useEffect(() => {
+        const fetchData = () => {
         fetch(saleUrl)
             //URL (saleUrl) からデータを取得
             //fetchメソッドの非同期処理が成功した後に実行されるコールバック関数を定義
@@ -26,7 +27,17 @@ const Sale = () => {
                 setLoading(false);
                 //データの読み込みが完了した状態
             });
-    });
+    };
+
+    fetchData(); //初回のマウント時にデータを取得
+
+    const interval = setInterval(fetchData, 5000);   //1分ごとにデータを取得
+
+    return () => {
+        clearInterval(interval);  //コンポーネントがアンマウントされたときにインターバルをクリア
+    };
+
+}, [saleUrl]);
 
     const TextStyle = (data) => {
         // 一定以上のデータ数値を定義（この場合は20以上）
