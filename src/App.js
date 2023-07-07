@@ -13,7 +13,6 @@ function App() {
   return (
     <>
       <Carousel interval={5000}>
-
         <Carousel.Item >
           <Container fluid className="container-fluid2">
             <Sale />
@@ -48,26 +47,27 @@ function App() {
           <WWeather area="140000" areaname="神奈川" />
         </Carousel.Item>
 
+        {/*style={{ '--bs-gutter-x': '0' }}の追加*/}
         <Carousel.Item>
-          <Container fluid className='infi'>
+          <Container fluid className='infi' style={{ '--bs-gutter-x': '0' }}>
             <Infi url='https://counity.blob.core.windows.net/counitysale/review.png' alt='レビュー広告' />
           </Container>
         </Carousel.Item>
 
         <Carousel.Item>
-          <Container fluid className='infi'>
+          <Container fluid className='infi' style={{ '--bs-gutter-x': '0' }}>
             <Infi url='https://counity.blob.core.windows.net/counitysale/recipe.png' alt='レシピ広告' />
           </Container>
         </Carousel.Item>
 
         <Carousel.Item>
-          <Container fluid className='infi'>
+          <Container fluid className='infi' style={{ '--bs-gutter-x': '0' }}>
             <Infi url='https://counity.blob.core.windows.net/counitysale/enquete.png' alt='アンケート機能広告' />
           </Container>
         </Carousel.Item>
 
         <Carousel.Item>
-          <Container fluid className='infi'>
+          <Container fluid className='infi' style={{ '--bs-gutter-x': '0' }}>
             <Infi url='https://counity.blob.core.windows.net/counitysale/concierge.png' alt='コンシェルジュ広告' />
           </Container>
         </Carousel.Item>
