@@ -37,7 +37,7 @@ const Sale = () => {
         clearInterval(interval);  //コンポーネントがアンマウントされたときにインターバルをクリア
     };
 
-}, [saleUrl]);
+}, [saleData,saleUrl]);
 
     const TextStyle = (data) => {
         // 一定以上のデータ数値を定義（この場合は20以上）
