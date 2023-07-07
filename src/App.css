@@ -37,13 +37,21 @@
   }
 }
 .img {
-  background-image:url('N749_sugasugasiiaozora.jpg');
+  background-image:url('https://counity.blob.core.windows.net/counitysale/N749_sugasugasiiaozora.jpg');
   background-repeat:no-repeat;
   background-size:  150% auto;
 }
 
-.imge{
-  background-image: url('https://counity.blob.core.windows.net/counitysale/SALEDAY試作.png');
-  background-repeat: no-repeat;
-  background-size:  150% auto;
-}  
+.container-fluid2{
+  background-image: url('https://counity.blob.core.windows.net/counitysale/saleday.png');
+  background-repeat: "no-repeat";
+  width: 1080px;
+  height: 1920px;
+  padding: 400px 0px 0px 0px;
+  margin: 0px;
+}
+.infi{
+  background-image: url('https://counity.blob.core.windows.net/counitysale/saleday.png');
+  background-repeat: "no-repeat";
+}
+
