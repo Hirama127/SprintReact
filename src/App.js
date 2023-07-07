@@ -12,63 +12,67 @@ import Carousel from 'react-bootstrap/Carousel';
 function App() {
   return (
     <>
-    <Carousel interval={5000}>
+      <Carousel interval={5000}>
 
+        <Carousel.Item >
+          <Container fluid className="container-fluid2">
+            <Sale />
+          </Container>
+        </Carousel.Item>
 
-     
-<Carousel.Item>
-      <Header />
-      <Container fluid className='img'>
-        <Row >
-          <Col>
-            <Weather area="110000" areaname="埼玉エリア" />
-          </Col>
-          <Col>
-            <Weather area="130000" areaname="東京エリア" />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Weather area="140000" areaname="神奈川エリア" />
-          </Col>
-          <Col>
-            <Weather area="120000" areaname="千葉エリア" />
-          </Col>
-        </Row>
-      </Container>
-      <SubHeader />
-      <Week />
-      <WWeather area="110000" areaname="埼玉" />
-      <WWeather area="130000" areaname="東京" />
-      <WWeather area="120000" areaname="千葉" />
-      <WWeather area="140000" areaname="神奈川" />
-  </Carousel.Item>
+        <Carousel.Item>
+          <Header />
+          <Container fluid className='img'>
+            <Row >
+              <Col>
+                <Weather area="110000" areaname="埼玉エリア" />
+              </Col>
+              <Col>
+                <Weather area="130000" areaname="東京エリア" />
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Weather area="140000" areaname="神奈川エリア" />
+              </Col>
+              <Col>
+                <Weather area="120000" areaname="千葉エリア" />
+              </Col>
+            </Row>
+          </Container>
+          <SubHeader />
+          <Week />
+          <WWeather area="110000" areaname="埼玉" />
+          <WWeather area="130000" areaname="東京" />
+          <WWeather area="120000" areaname="千葉" />
+          <WWeather area="140000" areaname="神奈川" />
+        </Carousel.Item>
 
-  <Carousel.Item>
-    <Container fluid className='infi'>
-      <Infi url='https://counity.blob.core.windows.net/counitysale/review.png' alt='レビュー広告'/>
-    </Container>
-  </Carousel.Item>
+        <Carousel.Item>
+          <Container fluid className='infi'>
+            <Infi url='https://counity.blob.core.windows.net/counitysale/review.png' alt='レビュー広告' />
+          </Container>
+        </Carousel.Item>
 
-  <Carousel.Item>
-    <Container fluid className='infi'>
-      <Infi url='https://counity.blob.core.windows.net/counitysale/recipe.png'alt='レシピ広告'/>
-    </Container>
-  </Carousel.Item>
+        <Carousel.Item>
+          <Container fluid className='infi'>
+            <Infi url='https://counity.blob.core.windows.net/counitysale/recipe.png' alt='レシピ広告' />
+          </Container>
+        </Carousel.Item>
 
-  <Carousel.Item>
-    <Container fluid className='infi'>
-      <Infi url='https://counity.blob.core.windows.net/counitysale/enquete.png' alt='アンケート機能広告'/>
-    </Container>
-  </Carousel.Item>
+        <Carousel.Item>
+          <Container fluid className='infi'>
+            <Infi url='https://counity.blob.core.windows.net/counitysale/enquete.png' alt='アンケート機能広告' />
+          </Container>
+        </Carousel.Item>
 
-  <Carousel.Item>
-    <Container fluid className='infi'>
-      <Infi url='https://counity.blob.core.windows.net/counitysale/concierge.png' alt='コンシェルジュ広告'/>
-    </Container>
-  </Carousel.Item>
+        <Carousel.Item>
+          <Container fluid className='infi'>
+            <Infi url='https://counity.blob.core.windows.net/counitysale/concierge.png' alt='コンシェルジュ広告' />
+          </Container>
+        </Carousel.Item>
 
-  </Carousel>
+      </Carousel>
     </>
   );
 }
