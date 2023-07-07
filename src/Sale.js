@@ -31,7 +31,7 @@ const Sale = () => {
 
     fetchData(); //初回のマウント時にデータを取得
 
-    const interval = setInterval(fetchData, 5000);   //1分ごとにデータを取得
+    const interval = setInterval(fetchData, 600000);   //1時間ごとにデータを取得
 
     return () => {
         clearInterval(interval);  //コンポーネントがアンマウントされたときにインターバルをクリア
