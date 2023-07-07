@@ -54,11 +54,7 @@ function App() {
           </Container>
         </Carousel.Item>
 
-        <Carousel.Item>
-          <Container fluid className='infi'>
-            <Infi url='https://counity.blob.core.windows.net/counitysale/recipe.png' alt='レシピ広告' />
-          </Container>
-        </Carousel.Item>
+     
 
         <Carousel.Item>
           <Container fluid className='infi'>
