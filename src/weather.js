@@ -129,7 +129,7 @@ function Weather(props) {
     `https://www.jma.go.jp/bosai/forecast/data/forecast/${props.area}.json`;
   const [imgSrc, setImgSrc] = useState();
   const [tempMax, setTempMax] = useState();
-  const [tempMin, setTempMin] = useState();
+
   useEffect(() => {
     const fecthWeatherData = () => {
       fetch(forecastUrl)
@@ -142,8 +142,7 @@ function Weather(props) {
           const temps = data[0].timeSeries[2].areas[0].temps[1];
           setTempMax(temps);
 
-          const mintemps = data[0].timeSeries[2].areas[0].temps[0];
-          setTempMin(mintemps);
+  
         })
         .catch(error => {
           console.log(error);
@@ -159,9 +158,9 @@ function Weather(props) {
 
   return (
     <>
-      <div style={{ width: '100%', height: '90%', textAlign: 'center' }}>
+      <div style={{ width: '93%', height: '83%', textAlign: 'center' }}>
         <h1>{areaname} </h1>
-        <h2 className="min">{tempMin}</h2><h2>/</h2><h2 className="max">{tempMax}</h2>
+        <h2 className="min">―</h2><h2>/</h2><div className="maxtoday">{tempMax}</div>
         <img src={imgSrc} alt={areaname} style={{ width: '89%', height: '80%', backgroundColor: 'rgba(255, 255, 255, 0.5)' }} />
       </div>
     </>

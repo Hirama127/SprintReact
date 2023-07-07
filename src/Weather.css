@@ -1,7 +1,7 @@
 .tabStyle th,
 .tabStyle td {
   border: 1px solid black;
-  font-size: 30;
+  font-size: 50;
   padding: 10;
   margin-top: 0;
   background-color: '#cccccc';
@@ -12,10 +12,13 @@
 
 h2 {
   display: inline-block;
+  font-size: 50;
 }
 
 .max {
   color: red;
+
+  
 }
 
 .min {
@@ -25,4 +28,9 @@ h2 {
 
 h3 {
   display: inline-block;
+}
+.maxtoday{
+  color: red;
+  display: inline-block;
+  font-size: 50px;
 }

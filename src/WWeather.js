@@ -169,7 +169,6 @@ function WWeather(props) {
     const [tempMax6, setTempMax6] = useState();
 
     const [tempMax, setTempMax] = useState();
-    const [tempMin, setTempMin] = useState();
     useEffect(() => {
         const fecthWeatherData = () => {
             fetch(forecastUrl)
@@ -261,7 +260,7 @@ function WWeather(props) {
                         </tr>
                         <tr style={{ textAlign: 'center' }}>
                             <th> <h3 className="min">最低</h3><h3>/</h3><h3 className="max">最高</h3></th>
-                            <th><h2 className="min">{tempMin}</h2><h2>/</h2><h2 className="max">{tempMax}</h2></th>
+                            <th><h2 className="min">-</h2><h2>/</h2><h2 className="max">{tempMax}</h2></th>
                             <th><h2 className="min">{tempMin1}</h2><h2>/</h2><h2 className="max">{tempMax2}</h2></th>
                             <th><h2 className="min">{tempMin2}</h2><h2>/</h2><h2 className="max">{tempMax3}</h2></th>
                             <th><h2 className="min">{tempMin3}</h2><h2>/</h2><h2 className="max">{tempMax4}</h2></th>
