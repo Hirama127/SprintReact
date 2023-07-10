@@ -8,11 +8,29 @@ import Week from './Week';
 import Infi from './Infi';
 import { Container, Row, Col } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
+import News from './News';
 
 function App() {
+    const newsData = [
+    { articleNo: 0 },
+    { articleNo: 1 },
+    { articleNo: 2 },
+    { articleNo: 3 },
+    { articleNo: 4 },
+  ];
   return (
     <>
-      <Carousel interval={5000}>
+  <Carousel interval={30000} className="custom-carousel justify-content-end">
+ 
+        {newsData.map((data, index) => (
+          <Carousel.Item key={index}>
+            <Container fluid className="container-fluid3">
+              <News articleNo={data.articleNo} />
+            </Container>
+          </Carousel.Item>
+        ))}
+     
+        
         <Carousel.Item >
           <Container fluid className="container-fluid2">
             <Sale />
@@ -71,6 +89,7 @@ function App() {
             <Infi url='https://counity.blob.core.windows.net/counitysale/concierge.png' alt='コンシェルジュ広告' />
           </Container>
         </Carousel.Item>
+        
 
       </Carousel>
     </>
