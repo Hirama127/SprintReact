@@ -48,7 +48,7 @@ function News(props) {
     /**
      * timerを使い10秒のインターバルでfetchNewsDataの情報を更新
      */
-    const timer = setInterval(fetchNewsData, 10000);
+    const timer = setInterval(fetchNewsData, 3600000);
     return()=>{
         clearInterval(timer);
     };
