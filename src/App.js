@@ -9,6 +9,7 @@ import Infi from './Infi';
 import { Container, Row, Col } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
 import News from './News';
+import Pokemon from './Pokemon';
 
 function App() {
     const newsData = [
@@ -20,7 +21,7 @@ function App() {
   ];
   return (
     <>
-  <Carousel interval={30000} className="custom-carousel justify-content-end">
+  <Carousel interval={60000} className="custom-carousel justify-content-end">
  
         {newsData.map((data, index) => (
           <Carousel.Item key={index}>
@@ -90,6 +91,12 @@ function App() {
           </Container>
         </Carousel.Item>
         
+              
+        <Carousel.Item >
+          <Container fluid>
+            <Pokemon />
+          </Container>
+        </Carousel.Item>
 
       </Carousel>
     </>

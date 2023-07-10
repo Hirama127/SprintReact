@@ -1,5 +1,8 @@
-import './App.css';
-
+/**
+ * 
+ * @param {各種画像ファイルのURL} props 
+ * @returns 各種画像ファイルのページ
+ */
 const Infi = (props) => {
   return (
     <>
