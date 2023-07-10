@@ -17,7 +17,7 @@ const Sale = () => {
             //取得したデータをJSON形式に変換
             .then(data => {
                 //dataという変数に代入
-                console.log(saleData);
+                
                 setSaleData(data);
                 //SaleDataのデータを更新
                 setLoading(false);
