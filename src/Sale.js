@@ -31,10 +31,12 @@ const Sale = () => {
 
     fetchData(); //初回のマウント時にデータを取得
 
-    const interval = setInterval(fetchData, 600000);   //1時間ごとにデータを取得
+    const interval = setInterval(fetchData, 600000);   
+    //1時間ごとにデータを取得
 
     return () => {
-        clearInterval(interval);  //コンポーネントがアンマウントされたときにインターバルをクリア
+        clearInterval(interval);  
+        //コンポーネントがアンマウントされたときにインターバルをクリア
     };
 
 }, [saleData,saleUrl]);
@@ -49,6 +51,7 @@ const Sale = () => {
         // データが一定以下の場合はデフォルトのスタイルを返す
         return {};
     };
+    
     //レンダリングの結果を返す
     return (
         <div>
