@@ -1,7 +1,7 @@
 /**
- * 
- * @param {各種画像ファイルのURL} props 
- * @returns 各種画像ファイルのページ
+ * 各種宣伝の画像を表示する
+ * @author 青木
+ * @returns 画像情報
  */
 const Infi = (props) => {
   return (

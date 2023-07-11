@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import './Weather.css';
-
+/**
+ * 週間天気予報を気象庁のJSONファイルから取得するjsファイル
+ * @author 青木
+ * @returns 週間の天気予報
+ */
 const tableStyle = {
     fontSize: 30,
     padding: 10,
@@ -142,10 +146,14 @@ function WWeather(props) {
             450: ["400.svg", "400.svg", "400", "雪で雷を伴う", "SNOW AND THUNDER"]
         }
     };
-
+    //地域情報をpropsで取得
     const areaname = props.areaname;
+
+    //エリアコードをURLに組み込み各エリアの情報を取得できるように設定する
     const forecastUrl =
         `https://www.jma.go.jp/bosai/forecast/data/forecast/${props.area}.json`;
+
+    //天気画像を格納する変数と対応したメソッドを宣言
     const [imgSrc1, setImgSrc1] = useState();
     const [imgSrc2, setImgSrc2] = useState();
     const [imgSrc3, setImgSrc3] = useState();
@@ -153,7 +161,7 @@ function WWeather(props) {
     const [imgSrc5, setImgSrc5] = useState();
     const [imgSrc6, setImgSrc6] = useState();
 
-
+    //最低気温を格納する変数と対応したメソッドを宣言
     const [tempMin1, setTempMin1] = useState();
     const [tempMin2, setTempMin2] = useState();
     const [tempMin3, setTempMin3] = useState();
@@ -161,21 +169,25 @@ function WWeather(props) {
     const [tempMin5, setTempMin5] = useState();
 
 
-
+    //最高気温を格納する変数と対応したメソッドを宣言
     const [tempMax2, setTempMax2] = useState();
     const [tempMax3, setTempMax3] = useState();
     const [tempMax4, setTempMax4] = useState();
     const [tempMax5, setTempMax5] = useState();
     const [tempMax6, setTempMax6] = useState();
-
     const [tempMax, setTempMax] = useState();
+
     useEffect(() => {
         const fecthWeatherData = () => {
+            //FetchAPIを使用してJsonファイルからデータを取得する
             fetch(forecastUrl)
                 .then(response => response.json())
                 .then(data => {
 
+                    //天気コードを取得
                     const weatherCodes = data[1].timeSeries[0].areas[0].weatherCodes;
+
+                    //その天気コードに対応した画像をimgに格納
                     for (let i = 0; i < weatherCodes.length; i++) {
                         const img = E.TELOPS[weatherCodes[i]][0];
                         if (i === 0) {
@@ -192,6 +204,8 @@ function WWeather(props) {
                             setImgSrc6(`https://www.jma.go.jp/bosai/forecast/img/${img}`);
                         }
                     }
+
+                    //最低気温を取得
                     const tempsMin = data[1].timeSeries[1].areas[0].tempsMin;
                     setTempMin1(tempsMin);
                     for (let i = 0; i < tempsMin.length; i++) {
@@ -207,6 +221,8 @@ function WWeather(props) {
                             setTempMin5(tempsMin[5]);
                         }
                     }
+
+                    //最高気温を取得
                     const tempsMax = data[1].timeSeries[1].areas[0].tempsMax;
                     for (let i = 0; i < tempsMax.length; i++) {
                         if (i === 0) {
@@ -224,17 +240,19 @@ function WWeather(props) {
                             setTempMax6(tempsMax[6]);
                         }
                     }
-
+                    //明日の最高気温を取得
                     const temps = data[0].timeSeries[2].areas[0].temps[1];
                     setTempMax(temps);
-                 
+
                 })
 
                 .catch(error => {
+                    //エラー処理
                     console.log(error);
                 });
         };
         fecthWeatherData();
+        //タイマーを設定して自動更新に対応
         const timer = setInterval(fecthWeatherData, 3600000);
         return () => {
             clearInterval(timer);

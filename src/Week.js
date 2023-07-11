@@ -1,6 +1,10 @@
 import './Weather.css';
 import { useState, useEffect } from "react";
-
+/**
+ * 週間天気予報を取得するjsファイル
+ * @author 青木
+ * @returns 週間天気予報情報
+ */
 const tableStyle = {
     fontSize: 30,
     padding: 10,
@@ -18,13 +22,14 @@ const tabStyle = {
     tableLayout: 'fixed',
 };
 
+//週間の日付情報を取得するためにJsonファイルのurlを変数に格納
 const forecastUrl = `https://www.jma.go.jp/bosai/forecast/data/forecast/130000.json`;
 
 function Week() {
-
     const [weatherData, setWeatherData] = useState(null);
     useEffect(() => {
 
+        //それぞれの日付情報を取得して定数に格納
         const fetchWeatherData = async () => {
             try {
                 const response = await fetch(forecastUrl);
@@ -38,12 +43,14 @@ function Week() {
                 let month5, day5, weekday5;
                 let month6, day6, weekday6;
     
+                //七日分繰り返す
                 for (let i = 0; i < 7; i++) {
                     const date = dates[i];
                     const month = date.getMonth() + 1;
                     const day = date.getDate();
                     const weekday = weekdays[date.getDay()];
     
+                    //繰り返した結果をそれぞれの別の値に格納する
                     if (i === 0) {
                         month1 = month;
                         day1 = day;
@@ -95,6 +102,7 @@ function Week() {
             }
         };
 
+         //タイマーを設定して自動更新に対応
         const fetchData = async () => {
             const data = await fetchWeatherData();
             setWeatherData(data);

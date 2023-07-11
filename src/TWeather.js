@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react";
 import './Weather.css';
+/**
+ * 明日の天気予報を気象庁のJSONファイルから取得するjsファイル
+ * @author 青木
+ * @returns 明日の天気予報
+ */
 function Weather(props) {
   var E = {
     TELOPS: {
@@ -124,31 +129,44 @@ function Weather(props) {
     }
   };
 
+  //地域情報をpropsで取得
   const areaname = props.areaname;
+
+  //エリアコードをURLに組み込み各エリアの情報を取得できるように設定する
   const forecastUrl =
     `https://www.jma.go.jp/bosai/forecast/data/forecast/${props.area}.json`;
+
+  //天気画像を格納する変数と対応したメソッドを宣言
   const [imgSrc, setImgSrc] = useState();
+  //最高気温を格納する変数と対応したメソッドを宣言
   const [tempMax, setTempMax] = useState();
 
   useEffect(() => {
     const fecthWeatherData = () => {
+      //FetchAPIを使用してJsonファイルからデータを取得する
       fetch(forecastUrl)
         .then(response => response.json())
         .then(data => {
+
+          //天気コードを取得
           const weatherCode = data[0].timeSeries[0].areas[0].weatherCodes[1];
+          //その天気コードに対応した画像をimgに格納
           const img = E.TELOPS[weatherCode][0];
           setImgSrc(`https://www.jma.go.jp/bosai/forecast/img/${img}`);
 
+          //最高気温を取得
           const temps = data[0].timeSeries[2].areas[0].temps[1];
           setTempMax(temps);
 
-  
+
         })
         .catch(error => {
+          //エラー処理
           console.log(error);
         });
     };
     fecthWeatherData();
+    //タイマーを設定して自動更新に対応
     const timer = setInterval(fecthWeatherData, 3600000);
     return () => {
       clearInterval(timer);

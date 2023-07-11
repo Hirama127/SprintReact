@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 /**
- * 明日の天気予報と本日の日付、時間を表示する
+ * 明日の天気予報というタイトルと本日の日付、時間を表示する
  * @author 青木
  * @returns 上部ヘッダーのHTML情報
  */
