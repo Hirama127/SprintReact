@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react';
+/**
+ * pokeAPIのJSONファイルからポケモンの情報を取得するjsファイル
+ * @author 青木、中山、道田
+ * @returns ポケモンGETだぜ!
+ */
 
+//ポケモンの日本名・説明・gif画像2種を取得
 const Pokemon = () => {
     const [japaneseName, setJapaneseName] = useState('');
     const [flavorText, setFlavorText] = useState('');
@@ -9,9 +15,9 @@ const Pokemon = () => {
     useEffect(() => {
 
         async function fetchPokemonData() {
+            //ポケモンを図鑑ナンバーによってランダムで取得
             const randnum = Math.floor(Math.random() * 649) + 1;
             try {
-
                 const response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${randnum}`);
                 const data = await response.json();
                 setImg(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${randnum}.gif`);
@@ -40,6 +46,7 @@ const Pokemon = () => {
             }
         }
 
+        //ポケモンのランダム取得時間をカルーセルが一巡するときに設定
         fetchPokemonData();
         const interval = setInterval(fetchPokemonData, 240000);
         return () => {
@@ -47,6 +54,7 @@ const Pokemon = () => {
         };
     }, []);
 
+    //画面に表示
     return (
         <div>
             <h1 className='poketitle'> {japaneseName} </h1>
