@@ -72,7 +72,7 @@ const Sale = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {saleData.map((item, Data) => (
+                        {saleData.slice(0, 5).map((item, Data) => (
                             //saleData配列の要素ごとに処理を行うためのメソッド
                             //mapメソッドで、配列の各要素に対して指定された関数を実行し、その結果を新しい配列として返す
                             //saleDataの各要素に対してmap関数を使用し、テーブルの行として表示
