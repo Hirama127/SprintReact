@@ -84,3 +84,20 @@
 }
 
 
+.poketitle{
+ font-size: 60px
+}
+
+.text{
+  font-size: 45px;
+}
+
+.poke{
+  width:45%;
+  margin: 60px;
+}
+
+.container-fluid4 {
+  padding: 0 !important;
+  background-image: url('https://counity.blob.core.windows.net/counitysale/monstarball.png');
+}

@@ -10,6 +10,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
 import News from './News';
 import Pokemon from './Pokemon';
+import PokemonHeader from './PokemonHeader';
 
 function App() {
     const newsData = [
@@ -93,7 +94,8 @@ function App() {
         
               
         <Carousel.Item >
-          <Container fluid>
+          <Container fluid className="container-fluid4">
+            <PokemonHeader />
             <Pokemon />
           </Container>
         </Carousel.Item>
