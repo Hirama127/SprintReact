@@ -19,7 +19,7 @@ function News(props) {
 
     //定数newUrlにJSONのURLを格納
     const newsUrl =
-      'https://newsapi.org/v2/top-headlines?country=jp&apiKey=d8c819299df24d048262832b733aef1c';
+    'https://counews.azurewebsites.net/news';
 
     //定数newUrを読み込みJSON情報を取得、以下の関数をfetchNewsDataに格納
     const fetchNewsData = () => {
