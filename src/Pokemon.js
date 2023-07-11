@@ -48,7 +48,7 @@ const Pokemon = () => {
 
         //ポケモンのランダム取得時間をカルーセルが一巡するときに設定
         fetchPokemonData();
-        const interval = setInterval(fetchPokemonData, 240000);
+        const interval = setInterval(fetchPokemonData, 10000);
         return () => {
             clearInterval(interval);
         };
