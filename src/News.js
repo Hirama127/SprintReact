@@ -16,12 +16,12 @@ function News(props) {
 
   //useEffectの設定
   useEffect(() => {
-    
+
     //定数newUrlにJSONのURLを格納
     const newsUrl =
       'https://newsapi.org/v2/top-headlines?country=jp&apiKey=d8c819299df24d048262832b733aef1c';
 
-      //定数newUrを読み込みJSON情報を取得、以下の関数をfetchNewsDataに格納
+    //定数newUrを読み込みJSON情報を取得、以下の関数をfetchNewsDataに格納
     const fetchNewsData = () => {
       fetch(newsUrl)
         .then(response => response.json())
@@ -32,7 +32,7 @@ function News(props) {
           setImgSrc(data.articles[articleNo].urlToImage);
           setNews(data.articles[articleNo].description);
         })
-       //エラー処理の場合
+        //エラー処理の場合
         .catch(error => {
           console.log(error);
         });
@@ -43,10 +43,10 @@ function News(props) {
 
     //timerを使い1時間のインターバルでfetchNewsDataの情報を更新
     const timer = setInterval(fetchNewsData, 3600000);
-  
-   //クリーンアップ処理
-    return()=>{
-        clearInterval(timer);
+
+    //クリーンアップ処理
+    return () => {
+      clearInterval(timer);
     };
 
   }, [props.articleNo]);
@@ -55,7 +55,7 @@ function News(props) {
 
   const renderTitle = () => {
     if (news) {
-       //設定した値に情報が入っていた場合、定数renderTitleに情報をリターンする
+      //設定した値に情報が入っていた場合、定数renderTitleに情報をリターンする
       return <h1 className="newsTitle">{title}</h1>
     } else {
       //それ以外の場合はNo Titleを定数renderTitleにリターンする
@@ -65,7 +65,7 @@ function News(props) {
 
   const renderImage = () => {
     if (imgSrc) {
-        //設定した値に情報が入っていた場合、定数renderImageに情報をリターンする
+      //設定した値に情報が入っていた場合、定数renderImageに情報をリターンする
       return <img src={imgSrc} className="newsImage" alt="" style={{ width: '100%', height: '100%' }} />;
     } else {
       //それ以外の場合は設定したイメージ画像を定数renderImageにリターンする
@@ -86,8 +86,8 @@ function News(props) {
   return (
     <>
       {renderTitle()}
-      {renderImage()}<br/>
-      {renderText()}<br/>
+      {renderImage()}<br />
+      {renderText()}<br />
     </>
   );
 }

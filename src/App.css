@@ -60,7 +60,7 @@
 
 
 .newsTitle {
-  font-size: calc(5vw + 10px); 
+  font-size: calc(5vw + 10px);
   font-style: italic;
   background-image: linear-gradient(to left, transparent, #00ff00);
   width: 100%;
@@ -70,7 +70,7 @@
 }
 
 .newsText {
-  font-size: calc(4vw + 10px); 
+  font-size: calc(4vw + 10px);
   font-style: oblique;
   background-image: linear-gradient(to left, transparent, #00ff00);
   bottom: 0;
@@ -79,25 +79,35 @@
   font-size: 60px;
   margin: 0px;
 }
+
 .container-fluid3 {
   padding: 0 !important;
 }
 
 
-.poketitle{
- font-size: 60px
+.poketitle {
+  font-size: 60px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
 }
 
-.text{
-  font-size: 45px;
+.text {
+  font-size: 50px;
+  color: rgba(0, 0, 0, 0.8);
+  font-style: italic;
+  text-align: left;
+  font-weight: 800;
+
 }
 
-.poke{
-  width:45%;
-  margin: 60px;
+.poke {
+  height: 700px;
+  width: auto;
+  margin: 0 auto;
 }
 
 .container-fluid4 {
   padding: 0 !important;
   background-image: url('https://counity.blob.core.windows.net/counitysale/monstarball.png');
+  text-align: center;
 }

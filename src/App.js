@@ -13,17 +13,18 @@ import Pokemon from './Pokemon';
 import PokemonHeader from './PokemonHeader';
 
 function App() {
-    const newsData = [
+  const newsData = [
     { articleNo: 0 },
     { articleNo: 1 },
     { articleNo: 2 },
     { articleNo: 3 },
     { articleNo: 4 },
   ];
+
   return (
     <>
-  <Carousel interval={60000} className="custom-carousel justify-content-end">
- 
+      <Carousel interval={20000} className="custom-carousel justify-content-end">
+
         {newsData.map((data, index) => (
           <Carousel.Item key={index}>
             <Container fluid className="container-fluid3">
@@ -31,8 +32,8 @@ function App() {
             </Container>
           </Carousel.Item>
         ))}
-     
-        
+
+
         <Carousel.Item >
           <Container fluid className="container-fluid2">
             <Sale />
@@ -91,8 +92,8 @@ function App() {
             <Infi url='https://counity.blob.core.windows.net/counitysale/concierge.png' alt='コンシェルジュ広告' />
           </Container>
         </Carousel.Item>
-        
-              
+
+
         <Carousel.Item >
           <Container fluid className="container-fluid4">
             <PokemonHeader />
