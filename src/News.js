@@ -66,7 +66,7 @@ function News(props) {
   const renderImage = () => {
     if (imgSrc) {
       //設定した値に情報が入っていた場合、定数renderImageに情報をリターンする
-      return <img src={imgSrc} className="newsImage" alt="" style={{ width: '100%', height: '100%' }} />;
+      return <img src={imgSrc} className="newsImage" alt="" />;
     } else {
       //それ以外の場合は設定したイメージ画像を定数renderImageにリターンする
       return <img src="https://counity.blob.core.windows.net/counitysale/noimage.png" className="newsImage" alt="ノーイメージ" style={{ width: '60%', height: '60%' }} />;
@@ -85,9 +85,9 @@ function News(props) {
 
   return (
     <>
-      {renderTitle()}
-      {renderImage()}<br />
-      {renderText()}<br />
+      {renderTitle()}<br/>
+      {renderImage()}<br/><br/>
+      {renderText()}
     </>
   );
 }

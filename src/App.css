@@ -60,28 +60,39 @@
 
 
 .newsTitle {
-  font-size: calc(5vw + 10px);
-  font-style: italic;
-  background-image: linear-gradient(to left, transparent, #00ff00);
+font-size: 80px;
   width: 100%;
-  top: 0;
-  left: 0;
-  margin: 0px;
+  text-align: left;
+  padding: 40px 40px 0 40px;
+  color:antiquewhite;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
 }
 
 .newsText {
-  font-size: calc(4vw + 10px);
-  font-style: oblique;
-  background-image: linear-gradient(to left, transparent, #00ff00);
-  bottom: 0;
   left: 0;
   width: 100%;
-  font-size: 60px;
-  margin: 0px;
+  font-size: 55px;
+  text-align: left;
+  padding: 40px 40px 0 40px;
+  color:antiquewhite;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+
+}
+.newsImage{
+width: auto;
+height: 400px;
+margin: 10px;
 }
 
 .container-fluid3 {
   padding: 0 !important;
+  text-align: center;
+  background-image: url('https://counity.blob.core.windows.net/counitysale/newsback.png');
+  background-repeat: "no-repeat";
+  width: 1080px;
+  height: 1920px;
 }
 
 
