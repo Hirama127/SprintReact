@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import './Sales.css';
-
+/**
+ * DBからセール情報を取得し表示する画面
+ * @author 道田
+ * @returns セール情報
+ */
 const Sale = () => {
     //状態の初期化
     const saleUrl = `https://counity.azurewebsites.net/adv`;
