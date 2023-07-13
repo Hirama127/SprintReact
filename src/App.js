@@ -77,7 +77,7 @@ function App() {
 
         <Carousel.Item>
           <Container fluid className='infi' style={{ '--bs-gutter-x': '0' }}>
-            <Infi url='https://counity.blob.core.windows.net/counitysale/recipe.png' alt='レシピ広告' />
+            <Infi url='https://counity.blob.core.windows.net/counitysale/kondate.png' alt='レシピ広告' />
           </Container>
         </Carousel.Item>
 
